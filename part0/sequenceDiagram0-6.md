@@ -15,7 +15,7 @@ sequenceDiagram
     Browser->>Browser: Event handler calls e.preventDefault() to prevent default form submission
     Browser->>Browser: The event handler creates a new note and then re-renders the list on the page
     Browser->>Server: Code issues HTTP POST request to new_note_spa
-    Browser->>Server: Content-Type header informs server data is represented in JSON format
+    Server->>Server: Content-Type header informs the server how to handle data represented in JSON format
     Server->>Server: Creates a new note object, adding to array notes
     Server->>Browser: Server responds with HTTP status code 201
     Browser->>Browser: Server doesn't request redirection, browser stays on same page, no more HTTP requests
