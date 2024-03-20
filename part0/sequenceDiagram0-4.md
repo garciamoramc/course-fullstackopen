@@ -15,7 +15,7 @@ sequenceDiagram
     Browser->>Server: When form button clicked, browser sends user input to server - HTTP POST /new_note
     Server->>Server: Creates a new note object, adding to array notes
     Server->>Browser: Server responds with HTTP status code 302, indicating redirection - HTTP 302 Redirect
-    Browser->>Server: Browser makes new HTTP GET request to location header address notes - GET /notes
+    Browser->>Server: Browser makes new HTTP GET request to location header address notes - GET notes
     Server->>Browser: Return HTML code 
     Browser->>Server: HTML links trigger browser to fetch stylesheet - GET main.css
     Server->>Browser: Return CSS file main.css
