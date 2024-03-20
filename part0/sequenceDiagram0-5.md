@@ -1,6 +1,6 @@
 ```mermaid
 sequenceDiagram
-    User->>Browser: Accesses https://studies.cs.helsinki.fi/exampleapp/spa
+    User->>Browser: Accesses https://studies.cs.helsinki.fi/exampleapp/spa through the address bar
     Browser->>Server: The browser fetches HTML code from the server - GET HTML spa
     Server->>Browser: Return HTML code
     Browser->>Server: HTML links trigger browser to fetch stylesheet - GET main.css
