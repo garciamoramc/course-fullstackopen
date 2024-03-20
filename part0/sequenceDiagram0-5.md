@@ -12,6 +12,8 @@ sequenceDiagram
     Server->>Browser: Return data.json
     Browser->>Browser: After fetching data, browser triggers event handler to display notes
     User->>Browser: User writes new note and clicks on Save
+    Browser->>Browser: Event handler calls e.preventDefault() to prevent default form submission
+    Browser->>Browser: The event handler creates a new note and then re-renders the list on the page
     Browser->>Server: Code issues HTTP POST request to new_note_spa
     Browser->>Server: Content-Type header informs server data is represented in JSON format
     Server->>Server: Creates a new note object, adding to array notes
